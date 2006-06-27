@@ -1,0 +1,11 @@
+--- ./doc/dnshistory.1.org	2006-06-24 23:50:26.000000000 +0000
++++ ./doc/dnshistory.1	2006-06-27 22:00:45.000000000 +0000
+@@ -119,7 +119,7 @@
+ dnshistory \-I dnsdb.dump \-d /tmp/d.db 
+ 
+ .SH "FILES"
+-.I /usr/local/var/dnshistory/dnshistory.db
++.I /var/lib/dnshistory/dnshistory.db
+ .br
+ .ti +4
+ The default history database file.
