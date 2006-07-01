@@ -1,6 +1,7 @@
 # TODO:
 # - move man_fix patch to ac/am automatic generation, based on configure option 
 Summary:	dnshistory - storing a history of DNS/Name changes
+Summary(pl):	dnshistory - przechowywanie historii zmian DNS/nazw
 Name:		dnshistory
 %define		_beta	beta1
 Version:	1.3
@@ -26,6 +27,13 @@ being that multiple analyses of older log files do not require
 re-lookups of IP Address to FQDNs, and additionally maintain the
 accuracy of the lookup as it was then and not as it is now.
 
+%description -l pl
+dnshistory daje mo¿liwo¶æ przechowywania historii zmian DNS/nazw dla
+adresów IP wyci±gniêtych z plików logów WWW. G³ównym zastosowaniem
+jest wielokrotne analizowanie starszych plików logów nie wymagaj±ce
+ci±g³ych przekszta³ceñ adresów IP na FQDN, a jednocze¶nie zachowuj±ce
+rezultaty przekszta³ceñ z przesz³o¶ci.
+
 %prep
 %setup -q -n %{name}-%{version}-%{_beta}
 %patch0 -p1
@@ -38,12 +46,12 @@ accuracy of the lookup as it was then and not as it is now.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{_databasedir}
+install -d $RPM_BUILD_ROOT%{_databasedir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-touch $RPM_BUILD_ROOT/%{_databasedir}/%{_dbfile}
+touch $RPM_BUILD_ROOT%{_databasedir}/%{_dbfile}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
