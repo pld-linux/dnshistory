@@ -5,7 +5,7 @@ Summary(pl):	dnshistory - przechowywanie historii zmian DNS/nazw
 Name:		dnshistory
 %define		_beta	beta1
 Version:	1.3
-Release:	0.5
+Release:	0.%{_beta}.1
 License:	GPL v2+
 Group:		Applications/Networking
 Source0:	http://www.stedee.id.au/files/%{name}-%{version}-%{_beta}.tar.gz
