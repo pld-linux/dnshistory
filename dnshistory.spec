@@ -1,7 +1,7 @@
 # TODO:
 # - move man_fix patch to ac/am automatic generation, based on configure option 
 Summary:	dnshistory - storing a history of DNS/Name changes
-Summary(pl.UTF-8):   dnshistory - przechowywanie historii zmian DNS/nazw
+Summary(pl.UTF-8):	dnshistory - przechowywanie historii zmian DNS/nazw
 Name:		dnshistory
 %define		_beta	beta1
 Version:	1.3
