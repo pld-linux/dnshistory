@@ -1,7 +1,7 @@
 # TODO:
 # - move man_fix patch to ac/am automatic generation, based on configure option 
 Summary:	dnshistory - storing a history of DNS/Name changes
-Summary(pl):	dnshistory - przechowywanie historii zmian DNS/nazw
+Summary(pl.UTF-8):   dnshistory - przechowywanie historii zmian DNS/nazw
 Name:		dnshistory
 %define		_beta	beta1
 Version:	1.3
@@ -27,12 +27,12 @@ being that multiple analyses of older log files do not require
 re-lookups of IP Address to FQDNs, and additionally maintain the
 accuracy of the lookup as it was then and not as it is now.
 
-%description -l pl
-dnshistory daje mo¿liwo¶æ przechowywania historii zmian DNS/nazw dla
-adresów IP wyci±gniêtych z plików logów WWW. G³ównym zastosowaniem
-jest wielokrotne analizowanie starszych plików logów nie wymagaj±ce
-ci±g³ych przekszta³ceñ adresów IP na FQDN, a jednocze¶nie zachowuj±ce
-rezultaty przekszta³ceñ z przesz³o¶ci.
+%description -l pl.UTF-8
+dnshistory daje moÅ¼liwoÅ›Ä‡ przechowywania historii zmian DNS/nazw dla
+adresÃ³w IP wyciÄ…gniÄ™tych z plikÃ³w logÃ³w WWW. GÅ‚Ã³wnym zastosowaniem
+jest wielokrotne analizowanie starszych plikÃ³w logÃ³w nie wymagajÄ…ce
+ciÄ…gÅ‚ych przeksztaÅ‚ceÅ„ adresÃ³w IP na FQDN, a jednoczeÅ›nie zachowujÄ…ce
+rezultaty przeksztaÅ‚ceÅ„ z przeszÅ‚oÅ›ci.
 
 %prep
 %setup -q -n %{name}-%{version}-%{_beta}
