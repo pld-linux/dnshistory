@@ -4,12 +4,14 @@ Summary:	dnshistory - storing a history of DNS/Name changes
 Summary(pl.UTF-8):	dnshistory - przechowywanie historii zmian DNS/nazw
 Name:		dnshistory
 Version:	1.3
-Release:	7
+Release:	8
 License:	GPL v2+
 Group:		Applications/Networking
 Source0:	http://www.stedee.id.au/files/%{name}-%{version}.tar.gz
 # Source0-md5:	6fa5dbb93bf3d69331077a1422350320
 Patch0:		%{name}-man_fix.patch
+Patch1:		%{name}-gzFile.patch
+Patch2:		%{name}-fno-common.patch
 URL:		http://www.stedee.id.au/dnshistory/
 BuildRequires:	db-devel
 BuildRequires:	pcre-devel
@@ -36,8 +38,11 @@ rezultaty przekształceń z przeszłości.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 %build
+CPPFLAGS="%{rpmcppflags}"; export CPPFLAGS
 %configure \
 	--enable-database-dir=%{_databasedir} \
 	--enable-database-name=%{_dbfile}
